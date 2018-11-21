@@ -125,5 +125,11 @@ Client.getAutoLogoutClient = (settings, handler) -> Promise.try () ->
     .finally () ->
       client.logout()
 
+Client.getLoginClient = (settings, handler) -> Promise.try () ->
+  client = new Client(settings)
+  client.login()
+  .then () ->
+    Promise.try () ->
+      handler(client)
 
 module.exports = Client
