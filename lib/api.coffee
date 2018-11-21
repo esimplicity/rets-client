@@ -30,4 +30,5 @@ module.exports =
   RetsParamError: errors.RetsParamError
   Client: Client
   getAutoLogoutClient: Client.getAutoLogoutClient
+  getLoginClient: Client.getLoginClient
   getReplyTag: replyCodes.getReplyTag
